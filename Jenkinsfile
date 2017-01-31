@@ -10,6 +10,7 @@ node {
     }
     stage('Deploy') {
       echo "Deploy it!"
+      sh "${mvnHome}/bin/mvn package"
       archive "target/my-project-1.0.jar"  
     }
 }
