@@ -9,6 +9,7 @@ node {
       sh "${mvnHome}/bin/mvn test"
     }
     stage('Deploy') {
-      echo "Deploy it!"  
+      echo "Deploy it!"
+      archive "target/my-project-1.0.jar"  
     }
 }
